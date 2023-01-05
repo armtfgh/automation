@@ -1,0 +1,54 @@
+{
+    "default": {
+      "volume": 12.5,
+      "micro_step_mode": 2,
+      "top_velocity": 24000,
+      "initialize_valve_position": "I"
+    },
+    "hubs": [
+      {
+        "io": {
+          "port": "/dev/ttyUSB11",
+          "baudrate": 9600,
+          "timeout": 1
+        },
+        "pumps": {
+          "water1": {
+            "switch": "0",
+            "top_velocity": 12000
+          }
+        }
+      },
+      {
+        "io": {
+          "port": "/dev/ttyUSB6",
+          "baudrate": 9600,
+          "timeout": 1
+        },
+        "pumps": {
+          "water2": {
+            "switch": "0"
+          }
+        }
+      },
+      {
+        "io": {
+          "port": "/dev/ttyUSB5",
+          "baudrate": 9600,
+          "timeout": 1
+        },
+        "pumps": {
+          "water3": {
+            "switch": "0"
+          }
+        }
+      }
+    ],
+    "groups": {
+      "chemicals": ["water1", "water2","water3"],
+      "oils": ["pentanol"]
+    }
+  }
+
+
+

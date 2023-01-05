@@ -1,0 +1,32 @@
+{
+  "default": {
+    "volume": 12.5,
+    "micro_step_mode": 2,
+    "top_velocity": 24000,
+    "initialize_valve_position": "I"
+  },
+  "hubs": [
+    {
+      "io": {
+        "port": "/dev/ttyUSB2",
+        "baudrate": 9600,
+        "timeout": 1
+      },
+      "pumps": {
+        "inj": {
+          "switch": "0",
+          "top_velocity": 12000
+        }
+      }
+    }
+
+    
+  ],
+  "groups": {
+    "chemicals": ["water1", "water2","water3"],
+    "oils": ["pentanol"]
+  }
+}
+
+
+
